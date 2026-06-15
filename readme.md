@@ -20,10 +20,12 @@ src
 └── main.ts
 ```
 
+```
 app.controller.ts  = untuk menerima request
 app.service.ts = Business logic
 app.module.ts =  tempat register module
 main.ts = Entry Point 
+```
 
 Sekarang tujuan kita ada men set   `main.ts` & `app.controller.ts`
 dan juga jgn lupa membuat folder  `└── views`  nya dan kira kira struktur folder nya akan jadi seperti ini
