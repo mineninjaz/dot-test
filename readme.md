@@ -28,6 +28,8 @@ main.ts = Entry Point
 Sekarang tujuan kita ada men set   `main.ts` & `app.controller.ts`
 dan juga jgn lupa membuat folder  `└── views`  nya dan kira kira struktur folder nya akan jadi seperti ini
 
-![Structure Folder](screenshots/struktur.png)
+#Structure
+
+`<img src="screenshots/struktur.png" alt="structure Folder" width="300"/>`
 
 nah setelah kita men set up  app.controller.ts & main.ts nya seperti yang ada di github dan kita sudah membuat struktur folder nya
