@@ -1,0 +1,33 @@
+<h1>Edit Category</h1>
+
+<form method="POST" action="/categories/edit/<%= category.id %>">
+
+    <div>
+        <label>Name</label>
+        <br>
+
+        <input type="text" name="name" value="<%= category.name %>" required>
+    </div>
+
+    <br>
+
+    <div>
+        <label>Description</label>
+        <br>
+
+        <textarea name="description"><%= category.description %></textarea>
+    </div>
+
+    <br>
+
+    <button type="submit">
+        Update
+    </button>
+
+</form>
+
+<br>
+
+<a href="/categories">
+    Back
+</a>

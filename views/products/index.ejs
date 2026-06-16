@@ -1,0 +1,51 @@
+<h1>Product List</h1>
+
+<form method="GET" action="/products" style="margin-bottom: 15px;">
+    <input type="text" name="search" placeholder="Search product name..." value="<%= typeof search !== 'undefined' ? search : '' %>">
+    <button type="submit">Search</button>
+    <% if (typeof search !== 'undefined' && search) { %>
+        <a href="/products">Clear</a>
+    <% } %>
+</form>
+
+<a href="/products/create">Tambah Product</a>
+<hr>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    <% products.forEach(product=> { %>
+
+        <tr>
+            <td>
+                <%= product.id %>
+            </td>
+            <td>
+                <%= product.name %>
+            </td>
+            <td>
+                <%= product.price %>
+            </td>
+            <td>
+                <%= product.stock %>
+            </td>
+            <td>
+                <%= product.category_name %>
+            </td>
+            <td>
+                <a href="/products/detail/<%= product.id %>">Detail</a>
+                <a href="/products/edit/<%= product.id %>">Edit</a>
+                <a href="/products/delete/<%= product.id %>" onclick="return confirm('Yakin mau hapus?')">Delete</a>
+            </td>
+        </tr>
+
+        <% }) %>
+
+</table>

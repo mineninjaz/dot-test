@@ -1,0 +1,41 @@
+<h1>Edit Product</h1>
+
+<form method="POST" action="/products/edit/<%= product.id %>">
+
+    <div>
+        <label>Name</label><br>
+        <input type="text" name="name" value="<%= product.name %>" required>
+    </div>
+    <br>
+
+    <div>
+        <label>Price</label><br>
+        <input type="number" name="price" step="0.01" value="<%= product.price %>" required>
+    </div>
+    <br>
+
+    <div>
+        <label>Stock</label><br>
+        <input type="number" name="stock" value="<%= product.stock %>">
+    </div>
+    <br>
+
+    <div>
+        <label>Category</label><br>
+        <select name="category_id" required>
+            <option value="">-- Select Category --</option>
+            <% categories.forEach(category => { %>
+                <option value="<%= category.id %>" <%= product.category_id == category.id ? 'selected' : '' %>>
+                    <%= category.name %>
+                </option>
+            <% }) %>
+        </select>
+    </div>
+    <br>
+
+    <button type="submit">Update</button>
+
+</form>
+
+<br>
+<a href="/products">Back</a>

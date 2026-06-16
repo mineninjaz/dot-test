@@ -1,0 +1,39 @@
+<h1>Create Product</h1>
+
+<form method="POST" action="/products/create">
+
+    <div>
+        <label>Name</label><br>
+        <input type="text" name="name" required>
+    </div>
+    <br>
+
+    <div>
+        <label>Price</label><br>
+        <input type="number" name="price" step="0.01" required>
+    </div>
+    <br>
+
+    <div>
+        <label>Stock</label><br>
+        <input type="number" name="stock" value="0">
+    </div>
+    <br>
+
+    <div>
+        <label>Category</label><br>
+        <select name="category_id" required>
+            <option value="">-- Select Category --</option>
+            <% categories.forEach(category => { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+            <% }) %>
+        </select>
+    </div>
+    <br>
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br>
+<a href="/products">Back</a>

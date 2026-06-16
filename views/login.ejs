@@ -1,5 +1,9 @@
 <h1>Login Admin</h1>
 
+<% if (locals.error) { %>
+    <p style="color: red;"><%= error %></p>
+<% } %>
+
 <form method="POST">
     <input type="text" name="username" placeholder="username">
     <br><br>
