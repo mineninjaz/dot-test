@@ -72,3 +72,13 @@ export const db = mysql.createPool({
 
 });
 ```
+
+**Login Credential**
+
+Username:
+admin
+
+Password:
+123456
+
+Terimakasih
