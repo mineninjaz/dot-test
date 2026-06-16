@@ -1,19 +1,74 @@
-**Documentasi Codingan**
+**Deksripsi Project**
 
-untuk melakukan clone github ini lakukan 
+#DOT Test - Admin Panel
+
+Project admin panel sederhana menggunakan NestJS (MVC) dan MySQL
+
+Fitur :
+
+- Login
+- Category CRUD
+- Product CRUD
+- Product Detail
+- Product Search
+
+Relasi database:
+`**Category memiliki banyak product (One-to-Many)**
+
+**Database Design
+ERD :**
+
+<img src="screenshots/relasi.png" alt="Relasi Database" width="300"/>
+
+
+**Tech Stack**
+
+- NestJS 11
+- TypeScript
+- MySQL
+- mysql2
+- EKS
+- Express
+
+**Structure Folder**
+
+<img src="screenshots/struktur.png" alt="struktur" width="300"/>
+
+
+
+**Cara Install**
+
+Clone Repository
+`git clone https://github.com/mineninjaz/dot-test.git
+`
+
+Install depedency
+`npm install
+`
+
+karena sudah ada  `package.json` & `package-lock.json`  jadi tinggal npm install aja
+
+Run application
+`npm run start:dev
+`
+
+
+**SET-UP  Database**
+
+1. akses `localhost:/phpmyadmin`
+2. Import file SQL
+   Didalam folder `Dot-test` terdapat  file  `database.sql  ` tinggal import saja file ini
+3. Ubah konfigurasi database
+   `src/database/database.ts`
 
 ```
-git clone https://github.com/mineninjaz/dot-test.git
+import mysql from 'mysql2/promise';
+
+export const db = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'dot_test',  // Bagian Ini yang di ganti ya
+
+});
 ```
-
-setelah beberapa saat setelah di clone langsung saja untuk melakukan running, atau kalian bisa melihat documentasi penggunaan nestJS  dibagian Compile and Run the project
-
-`npm run start:dev`
-
-Pastikan juga [Nest] Application is running ,  setelah itu pastikan kita belajar strukturnya terlebih dahulu seperti  struktur file dibawah ini
-
-Jika sudah lanjutkan dengan membuat folder   `└── views`  nya dan kira kira struktur folder nya akan jadi seperti ini
-
-#Structure Folder
-
-<img src="screenshots/struktur.png" alt="structure Folder" width="300"/>
