@@ -27,7 +27,6 @@ ERD :**
 - TypeScript
 - MySQL
 - mysql2
-- EKS
 - Express
 
 **Structure Folder**
