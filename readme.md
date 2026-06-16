@@ -81,4 +81,21 @@ admin
 Password:
 123456
 
-Terimakasih
+**Screenshot Aplikasi**
+
+Login
+
+<img src="screenshots/login.png" alt="struktur" width="300"/>
+
+
+Dashboard
+
+<img src="screenshots/dashboarddumy.png" alt="struktur" width="300"/>
+
+Categories
+
+<img src="screenshots/categories.png" alt="struktur" width="300"/>
+
+Products
+
+<img src="screenshots/products.png" alt="struktur" width="300"/>
