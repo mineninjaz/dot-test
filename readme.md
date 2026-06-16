@@ -85,7 +85,7 @@ Password:
 
 Login
 
-<img src="screenshots/login.png" alt="login" width="300"/>
+<img src="screenshots/login.png" alt="login.png" width="300"/>
 
 
 Dashboard
